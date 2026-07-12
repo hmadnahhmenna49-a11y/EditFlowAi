@@ -1,8 +1,6 @@
-import { Link } from 'react-router';
-import { ArrowRight } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import { useInView } from '../AppSections';
-import { useState, useEffect, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { CheckCircle, Send, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactoPage() {

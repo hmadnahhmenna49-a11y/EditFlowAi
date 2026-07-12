@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { CheckCircle, Send, Mail, Phone, MapPin } from 'lucide-react';
 import { useInView } from '../AppSections';
 

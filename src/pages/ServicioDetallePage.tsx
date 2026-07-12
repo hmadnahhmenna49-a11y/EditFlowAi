@@ -3,7 +3,7 @@ import {
   Code, Smartphone, Megaphone, BarChart3,
   CheckCircle, ArrowLeft, ArrowRight,
   Search, Target, Palette, Rocket, Settings,
-  Lightbulb, Layers, Database, Zap, Shield, Globe, TrendingUp, Users, BarChart2, FileText
+  Lightbulb, Layers, Database, Zap, TrendingUp, Users, BarChart2, FileText
 } from 'lucide-react';
 import PageHero from '../components/PageHero';
 
