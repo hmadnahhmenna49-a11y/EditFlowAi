@@ -54,7 +54,7 @@ export default function ContactoPage() {
         description="Cuéntanos qué necesitas y te responderemos en menos de 24 horas. Tu éxito empieza con una conversación."
       />
 
-      <section className="pb-24 sm:pb-32 aurora-triple">
+      <section className="pb-24 sm:pb-32">
         <div
           ref={ref}
           className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
@@ -64,7 +64,7 @@ export default function ContactoPage() {
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Form */}
             <div className="lg:col-span-3">
-              <div className="bg-brand-card border border-white/5 rounded-2xl p-6 sm:p-8 glass-premium gradient-border-box depth-noise">
+              <div className="bg-brand-card border border-white/5 rounded-2xl p-6 sm:p-8 glass">
                 {formState === 'sent' ? (
                   <div className="text-center py-12 scale-in">
                     <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
@@ -95,7 +95,7 @@ export default function ContactoPage() {
                           id="page-name"
                           name="name"
                           required
-                          className="w-full px-4 py-3 bg-brand-dark border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple focus:shadow-glow focus:shadow-glow-cyan transition-all"
+                          className="w-full px-4 py-3 bg-brand-dark border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple transition-all"
                           placeholder="Tu nombre"
                         />
                       </div>
@@ -108,7 +108,7 @@ export default function ContactoPage() {
                           id="page-email"
                           name="email"
                           required
-                          className="w-full px-4 py-3 bg-brand-dark border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple focus:shadow-glow focus:shadow-glow-cyan transition-all"
+                          className="w-full px-4 py-3 bg-brand-dark border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple transition-all"
                           placeholder="tu@empresa.com"
                         />
                       </div>
@@ -120,7 +120,7 @@ export default function ContactoPage() {
                       <select
                         id="page-subject"
                         name="subject"
-                        className="w-full px-4 py-3 bg-brand-dark border border-white/10 rounded-xl text-white focus:outline-none focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple focus:shadow-glow focus:shadow-glow-cyan transition-all"
+                        className="w-full px-4 py-3 bg-brand-dark border border-white/10 rounded-xl text-white focus:outline-none focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple transition-all"
                       >
                         <option value="">Selecciona un servicio</option>
                         <option value="web">Desarrollo Web</option>
@@ -145,7 +145,7 @@ export default function ContactoPage() {
                     <button
                       type="submit"
                       disabled={formState === 'sending'}
-                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:opacity-90 transition-all btn-glow disabled:opacity-50"
+                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:opacity-90 transition-all disabled:opacity-50"
                     >
                       {formState === 'sending' ? (
                         <>
@@ -179,7 +179,7 @@ export default function ContactoPage() {
 
             {/* Info sidebar + Map */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-brand-card border border-white/5 rounded-2xl p-6 sm:p-8 space-y-6 glass-premium gradient-border-box">
+              <div className="bg-brand-card border border-white/5 rounded-2xl p-6 sm:p-8 space-y-6 glass">
                 <h3 className="font-display font-semibold text-lg text-white">
                   Información de contacto
                 </h3>
@@ -211,7 +211,7 @@ export default function ContactoPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl overflow-hidden border border-white/5 aspect-[4/3] gradient-border-box">
+              <div className="rounded-2xl overflow-hidden border border-white/5 aspect-[4/3]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.0!2d-0.1833!3d38.9667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU4JzAwLjAiTiAwwrAxMCcwMC4wIlc!5e0!3m2!1ses!2ses!4v1"
                   width="100%"

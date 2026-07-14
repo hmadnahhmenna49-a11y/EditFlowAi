@@ -151,7 +151,7 @@ export default function Contacto() {
                   <button
                     type="submit"
                     disabled={formState === 'sending'}
-                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:opacity-90 transition-all hover:shadow-glow disabled:opacity-50"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:opacity-90 transition-all disabled:opacity-50"
                   >
                     {formState === 'sending' ? (
                       <>

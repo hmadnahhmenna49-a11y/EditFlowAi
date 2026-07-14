@@ -9,8 +9,8 @@ const services = [
     icon: Code,
     title: 'Desarrollo Web',
     description:
-      'Creamos sitios web corporativos, plataformas e-commerce y aplicaciones SaaS con las últimas tecnologías. Nuestros proyectos destacan por su rendimiento excepcional, diseño impecable y arquitectura escalable que acompaña el crecimiento de tu negocio.',
-    gradient: 'from-brand-purple to-brand-purple-light',
+      'Creamos sitios web corporativos, plataformas e-commerce y aplicaciones SaaS con las últimas tecnologías. Rendimiento excepcional, diseño impecable y arquitectura escalable.',
+    color: 'bg-brand-purple/10 text-brand-purple border-brand-purple/20',
     features: [
       'Sitios web corporativos y landing pages',
       'Plataformas e-commerce optimizadas',
@@ -23,8 +23,8 @@ const services = [
     icon: Smartphone,
     title: 'Apps Móviles',
     description:
-      'Desarrollamos aplicaciones nativas y multiplataforma para iOS y Android que ofrecen experiencias fluidas, interfaces intuitivas y un rendimiento óptimo. Cada app está diseñada para escalar y retaining a tus usuarios.',
-    gradient: 'from-brand-cyan to-brand-cyan-light',
+      'Desarrollamos aplicaciones nativas y multiplataforma para iOS y Android. Experiencias fluidas, interfaces intuitivas y rendimiento óptimo.',
+    color: 'bg-brand-cyan/10 text-brand-cyan border-brand-cyan/20',
     features: [
       'Apps nativas iOS y Android',
       'Desarrollo multiplataforma con React Native',
@@ -37,8 +37,8 @@ const services = [
     icon: Megaphone,
     title: 'Campañas Ads',
     description:
-      'Diseñamos y gestionamos estrategias de marketing digital en Google Ads, Meta Ads y LinkedIn. Optimización continua basada en datos, remarketing avanzado y reporting en tiempo real para maximizar tu ROI.',
-    gradient: 'from-pink-500 to-rose-400',
+      'Estrategias de marketing digital en Google Ads, Meta Ads y LinkedIn. Optimización continua, remarketing avanzado y reporting en tiempo real.',
+    color: 'bg-pink-500/10 text-pink-400 border-pink-500/20',
     features: [
       'Google Ads (Search, Display, Shopping)',
       'Meta Ads (Facebook e Instagram)',
@@ -51,8 +51,8 @@ const services = [
     icon: BarChart3,
     title: 'Consultoría',
     description:
-      'Asesoramiento estratégico para transformar digitalmente tu empresa. Analizamos tu situación actual, identificamos oportunidades de mejora y diseñamos un roadmap claro hacia la transformación digital completa.',
-    gradient: 'from-amber-500 to-orange-400',
+      'Asesoramiento estratégico para transformar digitalmente tu empresa. Analizamos tu situación y diseñamos un roadmap claro hacia la transformación digital.',
+    color: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
     features: [
       'Auditoría digital integral',
       'Estrategia de transformación digital',
@@ -74,28 +74,24 @@ export default function ServiciosPage() {
         description="Combinamos estrategia, diseño y tecnología para crear productos digitales que impulsan el crecimiento de tu empresa."
       />
 
-      <section className="pb-24 sm:pb-32 aurora-triple">
+      <section className="pb-24 sm:pb-32">
         <div
           ref={ref}
           className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {services.map((service, i) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {services.map((service) => (
               <Link
                 key={service.slug}
                 to={`/servicios/${service.slug}`}
-                className="group relative p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-purple/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow/20 holographic spotlight-card card-hover-lift animated-gradient-border shine-sweep"
-                style={{ transitionDelay: `${i * 100}ms` }}
+                className="group p-8 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-brand-purple/25 card-lift block"
               >
-                {/* Gradient border box inner wrapper */}
-                <div className="gradient-border-box rounded-xl">
-                {/* Icon */}
                 <div
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform sonar-pulse`}
+                  className={`w-14 h-14 rounded-xl ${service.color} border flex items-center justify-center mb-6 group-hover:scale-105 transition-transform`}
                 >
-                  <service.icon className="w-7 h-7 text-white" />
+                  <service.icon className="w-6 h-6" />
                 </div>
 
                 <h3 className="font-display font-semibold text-xl text-white mb-3">
@@ -105,20 +101,18 @@ export default function ServiciosPage() {
                   {service.description}
                 </p>
 
-                {/* Features */}
                 <ul className="space-y-2.5 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-brand-purple shrink-0 mt-0.5 icon-glow" />
+                      <CheckCircle className="w-4 h-4 text-brand-purple shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <div className="flex items-center gap-2 text-brand-purple group-hover:gap-3 transition-all">
-                  <span className="text-sm font-medium animated-underline">Ver detalles</span>
+                  <span className="text-sm font-medium link-underline">Ver detalles</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
                 </div>
               </Link>
             ))}

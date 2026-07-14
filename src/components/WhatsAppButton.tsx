@@ -15,7 +15,7 @@ export default function WhatsAppButton() {
       </span>
       {/* Button with glass premium background */}
       <span
-        className="relative w-16 h-16 rounded-full flex items-center justify-center glass-premium sonar-pulse transition-transform duration-300 group-hover:scale-110"
+        className="relative w-16 h-16 rounded-full flex items-center justify-center glass transition-transform duration-300 group-hover:scale-110"
         style={{
           boxShadow: '0 4px 24px rgba(34, 197, 94, 0.25), inset 0 0 0 2px rgba(34, 197, 94, 0.3)',
         }}

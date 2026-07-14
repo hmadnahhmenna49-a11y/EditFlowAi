@@ -50,13 +50,13 @@ export default function CookieConsent() {
       <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto">
-        <div className="glass-premium rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/40 gradient-border-box overflow-hidden">
+        <div className="glass rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/40 overflow-hidden">
           {/* Decorative gradient accent at top */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-brand-purple via-brand-cyan to-brand-purple" />
 
           <div className="flex flex-col sm:flex-row gap-6 items-start relative z-10">
             {/* Icon */}
-            <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-brand-purple/20 to-brand-cyan/20 border border-brand-purple/20 flex items-center justify-center sonar-pulse">
+            <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-brand-purple/20 to-brand-cyan/20 border border-brand-purple/20 flex items-center justify-center">
               <Cookie className="w-6 h-6 sm:w-7 sm:h-7 text-brand-purple" />
             </div>
 
@@ -89,7 +89,7 @@ export default function CookieConsent() {
                   <Link
                     to="/legal/cookies"
                     onClick={handleClose}
-                    className="inline-flex items-center gap-1 text-brand-purple hover:text-brand-purple-light text-xs mt-2 animated-underline"
+                    className="inline-flex items-center gap-1 text-brand-purple hover:text-brand-purple-light text-xs mt-2 link-underline"
                   >
                     Leer política completa de cookies
                     <ChevronRight className="w-3 h-3" />
@@ -101,7 +101,7 @@ export default function CookieConsent() {
               <div className="flex flex-wrap items-center gap-3 mt-4">
                 <button
                   onClick={handleAccept}
-                  className="btn-glow px-6 py-2.5 bg-gradient-to-r from-brand-purple to-brand-cyan text-white text-sm font-medium rounded-xl"
+                  className="px-6 py-2.5 bg-gradient-to-r from-brand-purple to-brand-cyan text-white text-sm font-medium rounded-xl"
                 >
                   Acceptar todas
                 </button>
@@ -113,7 +113,7 @@ export default function CookieConsent() {
                 </button>
                 <button
                   onClick={() => setShowDetails(!showDetails)}
-                  className="text-brand-purple hover:text-brand-purple-light text-sm font-medium animated-underline transition-colors"
+                  className="text-brand-purple hover:text-brand-purple-light text-sm font-medium link-underline transition-colors"
                 >
                   {showDetails ? 'Ocultar detalles' : 'Más información'}
                 </button>

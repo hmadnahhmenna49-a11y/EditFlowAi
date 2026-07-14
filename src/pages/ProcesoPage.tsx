@@ -74,7 +74,7 @@ export default function ProcesoPage() {
                     style={{ transitionDelay: `${i * 150}ms` }}
                   >
                     {/* Circle */}
-                    <div className="w-12 h-12 rounded-full bg-brand-card border-2 border-brand-purple/50 flex items-center justify-center relative z-10 shrink-0 hover:border-brand-purple hover:shadow-glow transition-all duration-300">
+                    <div className="w-12 h-12 rounded-full bg-brand-card border-2 border-brand-purple/50 flex items-center justify-center relative z-10 shrink-0 hover:border-brand-purple transition-all duration-300">
                       <Icon className="w-5 h-5 text-brand-purple" />
                     </div>
 
@@ -115,7 +115,7 @@ export default function ProcesoPage() {
             </p>
             <Link
               to="/contacto"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:opacity-90 transition-all hover:shadow-glow"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-brand text-white font-semibold rounded-xl hover:opacity-90 transition-all"
             >
               Empezar proyecto
               <ArrowRight className="w-5 h-5" />
